@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  {% load bootstrap5 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+</head>
+<style type="text/css">
+    .nav {
+        height:100%;
+        width:260px;
+        position: fixed;
+        z-index:1;
+        top:0;
+        left:0;
+        background-color:#111;
+        overflow-x: :hidden;
+        padding-top:20px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    nav a {
+        margin-left: 2%;
+        margin: 2%;
+    }
+
+</style>
+<body>
+    <nav class="nav flex-column nav-pills text-white">
+        <h5 class="mb-5 ">Selamat Datang</h5>
+        <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+        <a class="nav-link text-white" href="#">Database</a>
+        <a class="nav-link text-white" href="#">Pemeriksaan</a>
+        <a class="nav-link text-white" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </nav>
+	{% block content %}
+	{% endblock %}
+</body>
+<script>
+</script>
+</html>
